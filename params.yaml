@@ -1,0 +1,12 @@
+background_b: 255
+background_g: 86
+background_r: 150
+rosdistro: 'melodic
+
+  '
+roslaunch:
+  uris: {host_mars__41367: 'http://mars:41367/'}
+rosversion: '1.14.3
+
+  '
+run_id: 0678d8c6-7789-11e9-abe6-0800273b32d7
