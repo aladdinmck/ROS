@@ -13,5 +13,5 @@ http://wiki.ros.org/ROS/Installation
 
 Progress
 --------
-Beginner 8/20 - Using rqt_console and roslaunch
-wiki.ros.org/ROS/Tutorials/UsingRqtconsoleRoslaunch
+Beginner 8/20 - Using rqt_console and roslaunch:
+http://wiki.ros.org/ROS/Tutorials/UsingRqtconsoleRoslaunch
