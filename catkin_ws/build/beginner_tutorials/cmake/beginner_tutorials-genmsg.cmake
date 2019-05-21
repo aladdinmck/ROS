@@ -1,7 +1,5 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(FATAL_ERROR "Could not find messages which '/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg' depends on. Did you forget to specify generate_messages(DEPENDENCIES ...)?
-Cannot locate message [unit8] in package [beginner_tutorials] with paths [['/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg']]")
 message(STATUS "beginner_tutorials: 1 messages, 0 services")
 
 set(MSG_I_FLAGS "-Ibeginner_tutorials:/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
@@ -19,12 +17,23 @@ add_custom_target(beginner_tutorials_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg" NAME_WE)
+add_custom_target(_beginner_tutorials_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "beginner_tutorials" "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(beginner_tutorials
+  "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 
@@ -40,6 +49,8 @@ add_custom_target(beginner_tutorials_generate_messages_cpp
 add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_cpp _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(beginner_tutorials_gencpp)
@@ -50,6 +61,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beginner_tutorials_generate_message
 
 ### Section generating for lang: geneus
 ### Generating Messages
+_generate_msg_eus(beginner_tutorials
+  "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 
@@ -65,6 +82,8 @@ add_custom_target(beginner_tutorials_generate_messages_eus
 add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_eus _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(beginner_tutorials_geneus)
@@ -75,6 +94,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beginner_tutorials_generate_message
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(beginner_tutorials
+  "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 
@@ -90,6 +115,8 @@ add_custom_target(beginner_tutorials_generate_messages_lisp
 add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_lisp _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(beginner_tutorials_genlisp)
@@ -100,6 +127,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beginner_tutorials_generate_message
 
 ### Section generating for lang: gennodejs
 ### Generating Messages
+_generate_msg_nodejs(beginner_tutorials
+  "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 
@@ -115,6 +148,8 @@ add_custom_target(beginner_tutorials_generate_messages_nodejs
 add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_nodejs _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(beginner_tutorials_gennodejs)
@@ -125,6 +160,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beginner_tutorials_generate_message
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(beginner_tutorials
+  "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
+)
 
 ### Generating Services
 
@@ -140,6 +181,8 @@ add_custom_target(beginner_tutorials_generate_messages_py
 add_dependencies(beginner_tutorials_generate_messages beginner_tutorials_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/aladdinmck/ROS/catkin_ws/src/beginner_tutorials/msg/Num.msg" NAME_WE)
+add_dependencies(beginner_tutorials_generate_messages_py _beginner_tutorials_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(beginner_tutorials_genpy)
