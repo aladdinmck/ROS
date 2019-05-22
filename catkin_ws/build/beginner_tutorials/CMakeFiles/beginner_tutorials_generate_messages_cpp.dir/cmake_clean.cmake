@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/beginner_tutorials_generate_messages_cpp"
   "/home/aladdinmck/ROS/catkin_ws/devel/include/beginner_tutorials/Num.h"
+  "/home/aladdinmck/ROS/catkin_ws/devel/include/beginner_tutorials/AddTwoInts.h"
 )
 
 # Per-language clean rules from dependency scanning.
