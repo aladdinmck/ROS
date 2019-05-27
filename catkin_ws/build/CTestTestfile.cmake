@@ -5,4 +5,6 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("sojourner_gazebo")
 subdirs("beginner_tutorials")
+subdirs("mastering_ros_robot_description_pkg")

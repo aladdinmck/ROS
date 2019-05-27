@@ -1,2 +1,2 @@
-beginner_tutorials
+beginner_tutorials:mastering_ros_robot_description_pkg:sojourner_gazebo
 -DCATKIN_DEVEL_PREFIX=/home/aladdinmck/ROS/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/aladdinmck/ROS/catkin_ws/install -G Unix Makefiles
